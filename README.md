@@ -99,3 +99,8 @@ Jong Bhak, Department of Biomedical Engineering and Korean Genomics Center, UNIS
 - `scripts/shoreline_displacement.py`: horizontal distance between the 20 ka and present shorelines in PaleoMIST 1.0 (minimal, 0.25 deg). Results quoted in the manuscript: inner Bohai coast near Tianjin about 930 km, Korean west coast up to about 290 km, Korean east coast up to about 50 km.
 - Folder names follow the figure numbers used when each figure was first added. In manuscript v9/v10, `data/figure4_dogs` is Figure 6, `data/figure4_vegetation` is Figure 4, and `data/figure5_population` is Figure 5.
 - Manuscript v10 cites commit `63ace02` as the repository state that matches it.
+
+## v11 additions
+
+- `data/figure4_population_model/`: simulated hunter-gatherer density from the Timmermann and Friedrich (2016, Nature 538:92-95) human dispersal model (IBS ICCP dataset `human-dispersal-simulation/human-density`, 1 deg, 1-kyr snapshots). `human_pop_box_tf2016.csv` sums individuals in the analysis box (117-129.5E, 27-41.5N, East Sea side excluded) for 1-50 ka, split into cells that are sea in the model at 1 ka (exposed shelf) and the rest; scenarios A (early exit) and B (late exit). `human_density_tf2016_enc.txt` holds integer-rounded maps for 40, 21, 12 and 1 ka (scenario A) used in Figure 4.
+- Figure 5 circle radius is now 750 km (469 million people in 2020).

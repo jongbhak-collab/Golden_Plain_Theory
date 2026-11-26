@@ -110,8 +110,8 @@ label(134.0, 40.3, "동해", 12, sea)
 label(114.5, 16.5, "남중국해", 12, sea)
 label(141.5, 31.0, "태평양", 12, sea)
 
-# Golden Plain population circle (great circle, radius 950 km)
-CLON, CLAT, RKM = 123.5, 35.0, 950.0
+# Golden Plain population circle (great circle, radius 750 km)
+CLON, CLAT, RKM = 123.5, 35.0, 750.0
 br = np.radians(np.linspace(0, 360, 721)); d = RKM / 6371.0
 p1, l1 = math.radians(CLAT), math.radians(CLON)
 p2 = np.arcsin(np.sin(p1) * np.cos(d) + np.cos(p1) * np.sin(d) * np.cos(br))
@@ -122,14 +122,14 @@ ax.plot(l2, np.log(np.tan(np.pi / 4 + p2 / 2)), color="#8b0010", lw=2.4, zorder=
 ax.plot([math.radians(CLON)], [merc_y(CLAT)], marker="+", ms=11, mew=2.0, color="#8b0010", zorder=7)
 label(CLON, CLAT + 1.25, "황금평원", 13.5, "#8b0010", "bold")
 label(CLON, CLAT - 1.05, "(현재 황해)", 9.5, sea)
-ax.annotate("반경 950 km 원 안 인구\n약 7억 2천만 명 (2020년)", xy=(math.radians(131.4), merc_y(30.2)),
-            xytext=(math.radians(136.5), merc_y(27.0)), fontsize=10.5, color="#8b0010", fontweight="bold",
+ax.annotate("반경 750 km 원 안 인구\n약 4억 7천만 명 (2020년)", xy=(math.radians(129.2), merc_y(30.3)),
+            xytext=(math.radians(135.5), merc_y(27.3)), fontsize=10.5, color="#8b0010", fontweight="bold",
             ha="center", va="center", zorder=8,
             arrowprops=dict(arrowstyle="-", color="#8b0010", lw=1.0),
             bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="#8b0010", lw=0.8))
 land = "#1f2a2c"
 label(108.5, 33.0, "중국", 14, land, "bold")
-label(127.0, 39.8, "한반도", 11.5, land, "bold")
+label(130.0, 41.3, "한반도", 11.5, land, "bold")
 label(137.6, 37.4, "일본", 12, land, "bold")
 label(122.6, 23.6, "대만", 10.5, land, "bold")
 label(108.2, 14.2, "베트남", 11, land, "bold")

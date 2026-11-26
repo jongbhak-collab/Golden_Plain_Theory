@@ -1,4 +1,5 @@
 center_lon,center_lat,radius_km,population_2020_millions,land_area_10^3km2,mean_density_per_km2
+123.5,35.0,750,468.9,786,597
 123.5,35.0,900,673.1,1259,535
 123.5,35.0,950,716.4,1424,503
 123.5,35.0,1000,763.6,1597,478
