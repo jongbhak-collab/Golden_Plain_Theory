@@ -1,0 +1,54 @@
+{
+  "created": "2026-10-26",
+  "paleomist": {
+    "data_doi": "10.1594/PANGAEA.905800",
+    "citation": "Gowan E.J. (2019), dataset; corrected geographic grids April2021",
+    "paper_doi": "10.1038/s41467-021-21469-w",
+    "url": "https://doi.pangaea.de/10.1594/PANGAEA.905800",
+    "archive": "https://hs.pangaea.de/Maps/Global_Ice_Sheets/Gowan_ice_reconstruction.zip",
+    "zip_member": "ice_reconstruction/global_grid/reconstruction_0.25_degree.nc",
+    "scenario": "minimal",
+    "license": "CC BY4.0"
+  },
+  "climate": {
+    "citation": "Beyer R.M., Krapp M., Manica A. (2020), ScientificData7,236; pastclimv1.2.2 edition",
+    "paper_doi": "10.1038/s41597-020-0552-1",
+    "archive": "https://zenodo.org/records/7388091/files/Beyer2020_annual_vars_v1.2.2.nc?download=1",
+    "md5_full_source": "020d60c83d91965656b1e5ad4cc4f4a5",
+    "variable": "bio01",
+    "units": "degrees Celsius",
+    "time0_temperature_baseline": "1901\u20131930 observations"
+  },
+  "rivers": {
+    "modern_url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-rivers-lake-centerlines/",
+    "modern_license": "publicdomain",
+    "paleoriver_evidence": [
+      "https://doi.org/10.17559/TV-20160216023828",
+      "https://doi.org/10.3389/feart.2022.889268",
+      "KORDI1987 reportFig31p81; bathymetry-based hypothesis"
+    ],
+    "warning": "Artist-drawn conceptual corridors; not dated channel vectors"
+  },
+  "files": [
+    {
+      "path": "data/Beyer_temperature_east_asia_50ka.nc",
+      "bytes": 170726,
+      "sha256": "0e5c35d7a6b2c1b3e4cd66306537bd8a3e1c350dc22e069bc8dce3abb4bd38b1"
+    },
+    {
+      "path": "data/PaleoMIST_east_asia_50ka.nc",
+      "bytes": 2242060,
+      "sha256": "dbbd722f68760dc6f5387c8f0d0e860bb2e4e6e9b7ef0f3fd9f89735bac538b5"
+    },
+    {
+      "path": "data/river_corridors.json",
+      "bytes": 171060,
+      "sha256": "c4028795aa198e169dc2365d5f8a62fad04211dae13abfebbe4c39dc78906696"
+    },
+    {
+      "path": "data/sea_level_graph.json",
+      "bytes": 978,
+      "sha256": "502d022052f584fda952a1b693e9533807f45751688c988b8fd659522a4529b1"
+    }
+  ]
+}

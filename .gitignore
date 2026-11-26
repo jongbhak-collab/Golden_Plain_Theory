@@ -1,0 +1,5 @@
+build/
+data/etopo/*.tif
+data/etopo/*.nc
+__pycache__/
+*.pyc

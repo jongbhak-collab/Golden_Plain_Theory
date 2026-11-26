@@ -1,0 +1,8 @@
+tributary_joining_trunk,lon,lat,present_depth_m,condition,note
+고요하 (Liao He),121.2,38.5,,"SL -120 m, 10 km smoothing",rounded to 0.1 degree; depth from the original map labels where given
+"고압록강·고대동강 (Yalu, Taedong)",124.2,37.7,-84,"SL -120 m, 10 km smoothing",rounded to 0.1 degree; depth from the original map labels where given
+"고한강·고금강 (Han, Geum)",124.8,35.2,-91,"SL -120 m, 10 km smoothing",rounded to 0.1 degree; depth from the original map labels where given
+고영산강 (Yeongsan),124.7,34.8,,"SL -120 m, 10 km smoothing",rounded to 0.1 degree; depth from the original map labels where given
+고회하 (Huai),125.1,34.3,,"SL -120 m, 10 km smoothing",rounded to 0.1 degree; depth from the original map labels where given
+Golden River outlet,127.16,33.5,,"SL -120 m, 10 km smoothing","head of the Korea Strait trough, east of Jeju"
+paleo-Changjiang outlet,126.3,28.6,,"SL -120 m, 10 km smoothing",edge of the Okinawa Trough; separate drainage

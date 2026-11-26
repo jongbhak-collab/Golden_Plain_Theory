@@ -1,0 +1,10 @@
+site,site_ko,country,lon,lat,age_ka_rounded,record_type,figure_panel,source,coordinate_note
+Harbin (V0726),하얼빈,China,126.599,45.777,12.9,mitochondrial only,A,"Zhang M. et al. 2024, doi:10.1093/molbev/msae062, Table S1",digitized from Figure 4 (accuracy about 0.05 degree); river-bottom find without secure cultural context; point is the published collection locality
+Xinglong,싱룽,China,114.617,42.115,8.5,mitochondrial only,A,"Zhang M. et al. 2024, doi:10.1093/molbev/msae062, Table S1",digitized from Figure 4 (accuracy about 0.05 degree)
+Jingtoushan,징터우산,China,121.371,30.031,8.3,mitochondrial only,A,"Zhang M. et al. 2024, doi:10.1093/molbev/msae062, Table S1",digitized from Figure 4 (accuracy about 0.05 degree)
+Zhaojia,자오자,China,117.614,36.718,4.8,mitochondrial only,A,"Zhang M. et al. 2024, doi:10.1093/molbev/msae062, Table S1",digitized from Figure 4 (accuracy about 0.05 degree)
+Yabeili,야베이리,China,105.648,35.001,5.0,nuclear genome,A,"Zhang S.-J. et al. 2025, doi:10.1126/science.adu2836, Table S1",digitized from Figure 4 (accuracy about 0.05 degree); Chinese site name not verified
+Jinchankou,진찬커우,China,102.54,36.92,3.9,nuclear genome,A,"Zhang S.-J. et al. 2025, doi:10.1126/science.adu2836, Table S1",digitized from Figure 4 (accuracy about 0.05 degree)
+Gough's Cave,고프 동굴,United Kingdom,-2.766,51.282,14.3,nuclear genome,B,"Bergström et al. 2026, doi:10.1038/s41586-026-10112-7; Marsh et al. 2026, doi:10.1038/s41586-026-10170-x",digitized from Figure 4 (accuracy about 0.05 degree)
+Kesslerloch,케슬러로흐,Switzerland,8.694,47.745,14.2,nuclear genome,B,"Bergström et al. 2026, doi:10.1038/s41586-026-10112-7; Marsh et al. 2026, doi:10.1038/s41586-026-10170-x",digitized from Figure 4 (accuracy about 0.05 degree)
+Pinarbasi,피나르바시,Türkiye,33.019,37.494,15.8,nuclear genome,B,"Bergström et al. 2026, doi:10.1038/s41586-026-10112-7; Marsh et al. 2026, doi:10.1038/s41586-026-10170-x",digitized from Figure 4 (accuracy about 0.05 degree)

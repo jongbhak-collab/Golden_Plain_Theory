@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use these data or code, please cite the paper and this repository."
+title: "Golden Plain Theory: supplementary data and code"
+authors:
+  - family-names: Bhak
+    given-names: Jong
+    affiliation: "Department of Biomedical Engineering and Korean Genomics Center, Ulsan National Institute of Science and Technology (UNIST)"
+date-released: 2026-11-26
+license: MIT
+repository-code: "https://github.com/jongbhak-collab/Golden_Plain_Theory"
+url: "https://github.com/jongbhak-collab/Golden_Plain_Theory"
+keywords:
+  - Golden Plain
+  - Yellow Sea shelf
+  - Last Glacial Maximum
+  - paleodrainage
+  - ancient dogs
+preferred-citation:
+  type: article
+  title: "황금평원 이론: 황해 대륙붕에 잠긴 동아시아 인구사의 중심과 한국인의 형성 (The Golden Plain Theory: The Drowned Center of East Asian Population History on the Yellow Sea Shelf and the Formation of Koreans)"
+  authors:
+    - family-names: Bhak
+      given-names: Jong
+  journal: "유라시아문화 (Eurasian Culture)"
+  volume: 16
+  year: 2026
+  notes: "Submitted"
