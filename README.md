@@ -93,3 +93,9 @@ Jong Bhak, Department of Biomedical Engineering and Korean Genomics Center, UNIS
 
 - `data/figure4_vegetation/`: BIOME4 mega-biome subset (117-129.5E, 27-41N, 0.5 deg, 50 ka to 0 ka at 1-kyr steps) from the IBS ICCP 3-Ma CESM1.2/BIOME4 run (Zeller et al. 2023 Science; Yun et al. 2023 Clim. Past; dataset doi:10.22741/iccp.20230002, variable `mega_biome_mask`, time index 2950-3000). Codes: 2 warm-temperate forest, 3 temperate forest, 4 boreal forest, 5 savanna/dry woodland, 6 grassland/dry shrubland, 9 tundra, -1 ocean. `megabiome_enc.txt` is a compact text encoding; `scripts/figure4_v9_vegetation_decode.py` rebuilds the `.npy` (checksum 459023). The CSV gives mega-biome area on the exposed shelf per kyr.
 - `data/figure5_population/`: population inside great circles around the Golden Plain center from WorldPop 2020 1 km unconstrained grids (doi:10.5258/SOTON/WP00674). Raw rasters are not included; `scripts/figure5_v9_worldpop_mosaic.py` mosaics the 12 national files.
+
+## v10 additions
+
+- `scripts/shoreline_displacement.py`: horizontal distance between the 20 ka and present shorelines in PaleoMIST 1.0 (minimal, 0.25 deg). Results quoted in the manuscript: inner Bohai coast near Tianjin about 930 km, Korean west coast up to about 290 km, Korean east coast up to about 50 km.
+- Folder names follow the figure numbers used when each figure was first added. In manuscript v9/v10, `data/figure4_dogs` is Figure 6, `data/figure4_vegetation` is Figure 4, and `data/figure5_population` is Figure 5.
+- Tag `manuscript-v10` marks the repository state that matches manuscript v10.
