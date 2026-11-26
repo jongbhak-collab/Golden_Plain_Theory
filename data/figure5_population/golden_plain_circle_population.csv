@@ -1,5 +1,5 @@
-center_lon,center_lat,radius_km,population_2020_millions,land_area_10^3km2,mean_density_per_km2
-123.5,35.0,750,468.9,786,597
-123.5,35.0,900,673.1,1259,535
-123.5,35.0,950,716.4,1424,503
-123.5,35.0,1000,763.6,1597,478
+circle,center_lon,center_lat,radius_km,population_2020_millions,land_area_10^3km2,mean_density_per_km2,note
+GP,121.1,35.5,750,638.2,1067,598,Beijing inside; east rim through Ulsan-Pohang
+EC,134.9,38.6,580,113.2,281,403,East Sea rim; meets GP at Ulsan-Pohang; Vladivostok and Tokyo inside; includes 0.9 M in Russia (GPW v4.11)
+overlap,,,,1.0,13,79,GP and EC
+GP_old_center,123.5,35.0,750,468.9,786,597,superseded

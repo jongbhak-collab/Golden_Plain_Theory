@@ -104,3 +104,7 @@ Jong Bhak, Department of Biomedical Engineering and Korean Genomics Center, UNIS
 
 - `data/figure4_population_model/`: simulated hunter-gatherer density from the Timmermann and Friedrich (2016, Nature 538:92-95) human dispersal model (IBS ICCP dataset `human-dispersal-simulation/human-density`, 1 deg, 1-kyr snapshots). `human_pop_box_tf2016.csv` sums individuals in the analysis box (117-129.5E, 27-41.5N, East Sea side excluded) for 1-50 ka, split into cells that are sea in the model at 1 ka (exposed shelf) and the rest; scenarios A (early exit) and B (late exit). `human_density_tf2016_enc.txt` holds integer-rounded maps for 40, 21, 12 and 1 ka (scenario A) used in Figure 4.
 - Figure 5 circle radius is now 750 km (469 million people in 2020).
+
+## v12 additions
+
+- Figure 5 now shows two circles: GP (center 121.1E 35.5N, radius 750 km, 638 million people in 2020) and EC, the East Sea rim circle (center 134.9E 38.6N, radius 580 km, 113 million). They meet at Ulsan-Pohang. Russia is filled with GPW v4.11 2020 density (doi:10.7927/H49C6VHW) because no WorldPop file for Russia was used; all other countries are WorldPop.
