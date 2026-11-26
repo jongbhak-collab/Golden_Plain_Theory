@@ -98,4 +98,4 @@ Jong Bhak, Department of Biomedical Engineering and Korean Genomics Center, UNIS
 
 - `scripts/shoreline_displacement.py`: horizontal distance between the 20 ka and present shorelines in PaleoMIST 1.0 (minimal, 0.25 deg). Results quoted in the manuscript: inner Bohai coast near Tianjin about 930 km, Korean west coast up to about 290 km, Korean east coast up to about 50 km.
 - Folder names follow the figure numbers used when each figure was first added. In manuscript v9/v10, `data/figure4_dogs` is Figure 6, `data/figure4_vegetation` is Figure 4, and `data/figure5_population` is Figure 5.
-- Tag `manuscript-v10` marks the repository state that matches manuscript v10.
+- Manuscript v10 cites commit `63ace02` as the repository state that matches it.
