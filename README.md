@@ -108,3 +108,7 @@ Jong Bhak, Department of Biomedical Engineering and Korean Genomics Center, UNIS
 ## v12 additions
 
 - Figure 5 now shows two circles: GP (center 121.1E 35.5N, radius 750 km, 638 million people in 2020) and EC, the East Sea rim circle (center 134.9E 38.6N, radius 580 km, 113 million). They meet at Ulsan-Pohang. Russia is filled with GPW v4.11 2020 density (doi:10.7927/H49C6VHW) because no WorldPop file for Russia was used; all other countries are WorldPop.
+
+## v13 additions
+
+- Figure 1 is now a single 20 ka summary map: Figure 3 river model (sea level -120 m, 10 km smoothing), BIOME4 mega-biomes at 20 ka, simulated hunter-gatherer density at 20 ka (`data/figure4_population_model/human_density_tf2016_20ka.txt`), and the population-weighted center of the exposed plain (123.8E, 33.6N; area-weighted centroid 123.6E, 33.9N). Script: `scripts/figure1_v13_summary_20ka_build.py`. The old Figure 1 (modern bathymetry with literature channels) is retired.
