@@ -15,7 +15,7 @@ The Golden Plain is the continental shelf of the Bohai, the Yellow Sea and the n
 | 1. Modern bathymetry and literature paleochannels | `data/literature_paleochannels.geojson` | none (map made with the same layers as Figure 3) | ETOPO 2022 |
 | 2. Exposure and flooding of the Golden Plain | `data/figure2_paleomist/PaleoMIST_east_asia_50ka.nc`, `exposed_area_timeseries.csv` | `compute_exposed_area.py`, `figure2_plot.py` | none |
 | 3. Golden River drainage predicted from modern bathymetry | `data/figure3_golden_river/*` (predicted paths, path summary, confluences, isobaths), `data/literature_paleochannels.geojson` | `download_etopo2022_subset.py`, `run_golden_river.sh`, `golden_river_route.py`, `golden_river_trace.py`, `golden_river_map_original.py`, `figure3_restyle_*.py` | ETOPO 2022 |
-| 4. Yellow Sea plain and ancient dogs | `data/figure4_dogs/*` (dog records, Japanese wolf island range, -120 m and -200 m isobaths) | `figure4_restyle_korean.py` | ETOPO1 (base relief only) |
+| 4. Golden Plain and ancient dogs | `data/figure4_dogs/*` (dog records, Japanese wolf island range, -120 m and -200 m isobaths) | `figure4_restyle_korean.py` | ETOPO1 (base relief only) |
 
 Final figures as printed in the paper are in `figures/` (PNG, PDF and editable SVG). The two source SVGs from which some layers were recovered are in `figures/source/`.
 

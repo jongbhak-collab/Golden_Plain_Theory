@@ -1,7 +1,7 @@
 """Recover map data from the published figure SVGs (matplotlib vector output).
 
 Figure 3 (Golden River map): literature paleochannel polylines and contour lines.
-Figure 4 (Yellow Sea plain and ancient dogs): dog record points, Japanese wolf island range,
+Figure 4 (Golden Plain and ancient dogs): dog record points, Japanese wolf island range,
 shoreline-proxy contours. Coordinates are recovered by inverting each panel's linear
 lon/lat-to-SVG transform, read from the axes frame and tick positions in the SVG itself.
 

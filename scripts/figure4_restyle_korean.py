@@ -26,7 +26,7 @@ bg = etree.Element(f"{{{NS}}}rect", x=str(-L), y="0", width=str(W + L + R), heig
 fig.insert(0, bg)
 title = root.find("s:title", N)
 if title is not None:
-    title.text = "황해 평원과 고대 개"
+    title.text = "황금평원과 고대 개"
 
 # 2) editable text replacements
 MAP = {
@@ -40,7 +40,7 @@ MAP = {
     "-200 m contour": "-200 m 등심선", "(shelf-margin guide)": "(대륙붕 가장자리 참고선)",
     "Dog: nuclear DNA": "개: 핵유전체 기록", "Dog: mtDNA only": "개: 미토게놈 기록만",
     "Japanese wolf:": "일본늑대:", "historic island range": "역사적 섬 분포 범위",
-    "The Yellow Sea plain and ancient dogs": "황해 평원과 고대 개",
+    "The Yellow Sea plain and ancient dogs": "황금평원과 고대 개",
     "A  Exposed shelf scenario and selected dated dog records": "A  노출 대륙붕 시나리오와 연대가 측정된 주요 개 기록",
     "B  Early nuclear-DNA records": "B  초기 핵유전체 개 기록",
     "1  Gough’s Cave  14.3 ka": "1  고프 동굴(영국)  14,300년 전",
@@ -105,7 +105,7 @@ DOG = "fill:#151b20"
 HALO_W = "stroke:#ffffff; stroke-width:3.4; stroke-linejoin:round"
 labels = {
     # id: (lines, align, fill, halo_color, halo_width, size)
-    "text_15": (["황해 평원", "'황금평원'", "(가설)"], "middle", "#65430f", "#f4e9ca", 3.2, 16.5),
+    "text_15": (["황금평원"], "middle", "#65430f", "#f4e9ca", 3.6, 19.0),
     "text_17": (["하얼빈", "12,900년 전"], "start", "#151b20", "#ffffff", 3.4, 15.0),
     "text_18": (["싱룽", "8,500년 전"], "start", "#151b20", "#ffffff", 3.4, 15.0),
     "text_19": (["징터우산", "8,300년 전"], "start", "#151b20", "#ffffff", 3.4, 15.0),
@@ -122,7 +122,7 @@ for gid, (lines, align, fill, halo, hw, size) in labels.items():
     g.getparent().remove(g)
     n = len(lines)
     lead = (y1 - y0 - size * 0.72) / max(n - 1, 1) if n > 1 else 0
-    first = y0 + size * 0.80
+    first = y0 + size * 0.80 if n > 1 else (y0 + y1) / 2 + size * 0.36
     lead = (y1 - first) / max(n - 1, 1) if n > 1 else 0
     x = (x0 if align == "start" else (x0 + x1) / 2) + SHIFT.get(gid, 0.0)
     for k, line in enumerate(lines):
