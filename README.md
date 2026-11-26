@@ -15,7 +15,7 @@ The Golden Plain is the continental shelf of the Bohai, the Yellow Sea and the n
 | 1. Modern bathymetry and literature paleochannels | `data/literature_paleochannels.geojson` | none (map made with the same layers as Figure 3) | ETOPO 2022 |
 | 2. Exposure and flooding of the Golden Plain | `data/figure2_paleomist/PaleoMIST_east_asia_50ka.nc`, `exposed_area_timeseries.csv` | `compute_exposed_area.py`, `figure2_plot.py` | none |
 | 3. Golden River drainage predicted from modern bathymetry | `data/figure3_golden_river/*` (predicted paths, path summary, confluences, isobaths), `data/literature_paleochannels.geojson` | `download_etopo2022_subset.py`, `run_golden_river.sh`, `golden_river_route.py`, `golden_river_trace.py`, `golden_river_map_original.py`, `figure3_restyle_*.py` | ETOPO 2022 |
-| 4. Golden Plain and ancient dogs | `data/figure4_dogs/*` (dog records, Japanese wolf island range, -120 m and -200 m isobaths) | `figure4_restyle_korean.py` | ETOPO1 (base relief only) |
+| 4. Golden Plain, ancient dogs and Japanese wolf samples | `data/figure4_dogs/dog_records.csv` (19 dated dog records), `japanese_wolf_samples.csv` (14 sample localities), `japanese_wolf_island_range.geojson`, -120 m and -200 m isobaths | `figure4_restyle_korean.py`, then `figure4_v8_build.py` (site table in `figure4_v8_sites.py`) | ETOPO1 (base relief only) |
 
 Final figures as printed in the paper are in `figures/` (PNG, PDF and editable SVG). The two source SVGs from which some layers were recovered are in `figures/source/`.
 
@@ -35,6 +35,10 @@ python3 scripts/figure2_plot.py data/figure2_paleomist/PaleoMIST_east_asia_50ka.
 
 # Figure 3 and Table 3 (downloads about 20 MB of ETOPO 2022 from NOAA on first run)
 bash scripts/run_golden_river.sh
+
+# Figure 4 (from the English source SVG)
+python3 scripts/figure4_restyle_korean.py figures/source/Figure4_source_en.svg build/fig4_ko.svg
+python3 scripts/figure4_v8_build.py build/fig4_ko.svg build/Figure4.svg
 ```
 
 All commands run from the repository root. The routing step needs `pysheds` and a few GB of memory.
@@ -47,7 +51,9 @@ All commands run from the repository root. The routing step needs `pysheds` and 
 
 **Literature paleochannels (Figures 1 and 3).** Channels digitized and generalized from published figures: solid lines from Song et al. (2016); blue dashed lines from Yoo et al. (2016); the blue dotted alternative paleo-Yeongsan route from KORDI (1987). Orange and teal dashed lines are conceptual connections drawn for this study to link the mapped channels to the outer shelf; they rest on no single source. These lines were recovered from the vector layers of the Figure 3 source SVG (`scripts/extract_svg_layers.py`).
 
-**Dog records (Figure 4).** Nine selected records: six from East Asia (mitochondrial-only records from Zhang M. et al. 2024; nuclear records from Zhang S.-J. et al. 2025) and three early western Eurasian nuclear records (Bergström et al. 2026; Marsh et al. 2026). Coordinates were recovered from the marker positions in the Figure 4 source SVG by inverting each panel's lon/lat axes, so they carry about 0.05 degree uncertainty. The three western sites agree with their published locations to within that margin. Ages are rounded calibrated direct dates as printed in the figure. The Chinese name of the site plotted as "Yabeili" is not verified. The Japanese wolf island range (Honshu, Shikoku, Kyushu) is regional context after Gojobori et al. (2024), drawn with Natural Earth 1:10m land outlines; it is not a map of specimens.
+**Dog records (Figure 4, panels A-C).** Nineteen selected dated records: seven from China, three from Korea, six from Japan and three early western Eurasian nuclear records. Nuclear-genome records: Yabeili and Jinchankou (Zhang S.-J. et al. 2025), Neukdo and Bonghwang-dong (low-coverage genomes, Kim H. et al. 2026) and the three western sites (Bergström et al. 2026; Marsh et al. 2026). Mitochondrial records: Harbin, Xinglong, Jingtoushan and Jiaojia (Zhang M. et al. 2024), Dadunzi in Yunnan (Zhang S.-J. et al. 2026), Kamikuroiwa, Odake, Mukaidai and Suwada (Xiaokaiti et al. 2024), Higashimyo (partial control region, Masuda and Sato 2015) and WolseongDog-1 (author's group, unpublished). Natsushima, the oldest dog in Japan (about 9,300 years ago), is a morphological record without DNA. Coordinates are published site coordinates where available; others are site or island representative points, and the precision of each point is stated in `coordinate_basis`. The Harbin dog was recovered from a river bottom without a reported findspot, so it is drawn near Harbin with a dashed ring. Ages are calibrated years before 1950 or archaeological periods, as stated in `age_basis`. The Chinese name of the site plotted as "Yabeili" is not verified.
+
+**Japanese wolf samples (Figure 4A).** Sample localities of Japanese wolves with DNA data, from Matsumura et al. (2021, Table 1) and Ishiguro et al. (2009); the six genome-sequenced localities follow Gojobori et al. (2024), and the 35,000-year-old Pleistocene wolf from Sano, Tochigi follows Segawa et al. (2022). Most localities are recorded only at prefecture level, so each point is a representative point inside the prefecture, chosen to avoid overplotting. Specimens without a recorded locality (Leiden and Berlin collections) are not plotted. The purple island range (Honshu, Shikoku, Kyushu) is regional context, drawn with Natural Earth 1:10m land outlines.
 
 ## Data sources and licenses
 
@@ -58,7 +64,8 @@ All commands run from the repository root. The routing step needs `pysheds` and 
 | PaleoMIST 1.0 | Gowan et al. (2021), doi:10.1038/s41467-021-21469-w; data doi:10.1594/PANGAEA.905800 | CC BY 4.0 |
 | Natural Earth land | naturalearthdata.com | Public domain |
 | Literature channels | Song et al. (2016), doi:10.17559/TV-20160216023828; Yoo et al. (2016), doi:10.1016/j.marpetgeo.2016.03.005; KORDI (1987), report BSPE 00087-137-5 | Generalized traces; cite the original studies |
-| Dog records | Zhang M. et al. (2024), doi:10.1093/molbev/msae062; Zhang S.-J. et al. (2025), doi:10.1126/science.adu2836; Bergström et al. (2026), doi:10.1038/s41586-026-10112-7; Marsh et al. (2026), doi:10.1038/s41586-026-10170-x | Cite the original studies |
+| Dog records | Zhang M. et al. (2024), doi:10.1093/molbev/msae062; Zhang S.-J. et al. (2025), doi:10.1126/science.adu2836; Zhang S.-J. et al. (2026), doi:10.1186/s12862-026-02611-y; Kim H. et al. (2026), doi:10.1371/journal.pone.0346864; Xiaokaiti et al. (2024), doi:10.1537/ase.230617; Masuda and Sato (2015), doi:10.1537/ase.150111; Bergström et al. (2026), doi:10.1038/s41586-026-10112-7; Marsh et al. (2026), doi:10.1038/s41586-026-10170-x | Cite the original studies |
+| Japanese wolf samples | Ishiguro et al. (2009), doi:10.2108/zsj.26.765; Matsumura et al. (2021), doi:10.2108/zs200019; Segawa et al. (2022), doi:10.1016/j.cub.2022.04.034; Gojobori et al. (2024), doi:10.1038/s41467-024-46124-y | Cite the original studies |
 
 Code in this repository is released under the MIT License (`LICENSE`). Figures and derived data made by the author (area time series, predicted paths, recovered layers) are released under CC BY 4.0 (`LICENSE-DATA.md`). Third-party data keep their own terms.
 
@@ -70,7 +77,7 @@ Code in this repository is released under the MIT License (`LICENSE`). Figures a
 
 ## 한국어 요약
 
-이 저장소는 『유라시아문화』 16집 투고 논문 「황금평원 이론」의 그림 1~4를 다시 그리는 데 필요한 자료와 코드를 담는다. 그림 2의 노출 면적은 PaleoMIST 1.0 부분 자료와 계산 스크립트로, 그림 3의 황금강은 ETOPO 2022 내려받기 스크립트와 배수망 계산 코드, 예측 경로 GeoJSON으로 재현된다. 문헌 고하천과 개 기록, 일본늑대 분포 범위는 원본 그림의 벡터 레이어에서 좌표를 복원하였다. 예측 경로는 측량된 고하도가 아니라 현재 해저 지형이 예측하는 후보 경로이다.
+이 저장소는 『유라시아문화』 16집 투고 논문 「황금평원 이론」의 그림 1~4를 다시 그리는 데 필요한 자료와 코드를 담는다. 그림 2의 노출 면적은 PaleoMIST 1.0 부분 자료와 계산 스크립트로, 그림 3의 황금강은 ETOPO 2022 내려받기 스크립트와 배수망 계산 코드, 예측 경로 GeoJSON으로 재현된다. 문헌 고하천은 원본 그림의 벡터 레이어에서 좌표를 복원하였다. 그림 4의 개 기록 19건과 일본늑대 표본 산지 14곳은 문헌 좌표와 대표점으로 정리하였고, 정밀도를 표에 적었다. 예측 경로는 측량된 고하도가 아니라 현재 해저 지형이 예측하는 후보 경로이다.
 
 ## How to cite
 
