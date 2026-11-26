@@ -88,3 +88,8 @@ Please cite the paper above and this repository:
 ## Contact
 
 Jong Bhak, Department of Biomedical Engineering and Korean Genomics Center, UNIST. jongbhak@unist.ac.kr
+
+## v9 additions (manuscript Figures 4 and 5; dog figure is now Figure 6)
+
+- `data/figure4_vegetation/`: BIOME4 mega-biome subset (117-129.5E, 27-41N, 0.5 deg, 50 ka to 0 ka at 1-kyr steps) from the IBS ICCP 3-Ma CESM1.2/BIOME4 run (Zeller et al. 2023 Science; Yun et al. 2023 Clim. Past; dataset doi:10.22741/iccp.20230002, variable `mega_biome_mask`, time index 2950-3000). Codes: 2 warm-temperate forest, 3 temperate forest, 4 boreal forest, 5 savanna/dry woodland, 6 grassland/dry shrubland, 9 tundra, -1 ocean. `megabiome_enc.txt` is a compact text encoding; `scripts/figure4_v9_vegetation_decode.py` rebuilds the `.npy` (checksum 459023). The CSV gives mega-biome area on the exposed shelf per kyr.
+- `data/figure5_population/`: population inside great circles around the Golden Plain center from WorldPop 2020 1 km unconstrained grids (doi:10.5258/SOTON/WP00674). Raw rasters are not included; `scripts/figure5_v9_worldpop_mosaic.py` mosaics the 12 national files.
